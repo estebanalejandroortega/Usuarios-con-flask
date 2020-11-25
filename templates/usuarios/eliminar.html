@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html'%}
+{% block title %}
+Eliminar Usuario
+{% endblock %}
+{% block content %}
+<form action="{{url_for('eliminar_usuarios')}}" method="POST"> 
+    <div class="form-group">
+        <label for="id">ID</label>
+        <input class="form-control" id="id" name="id" placeholder="ID de usuario a eliminar">
+    </div>
+    <a class="btn btn-success2" href="{{url_for('usuarios')}}">Volver</a>
+    <button class="btn btn-danger">Eliminar Usuario</button>
+</form>
+{% endblock%}
